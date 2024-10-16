@@ -17,6 +17,7 @@ function App() {
         >
           Learn React
         </a>
+        <input type='text' placeholder='Enter a name' className='username'/>
       </header>
     </div>
   );
