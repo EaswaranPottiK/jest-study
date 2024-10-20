@@ -25,9 +25,18 @@ import App from './App';
 //   expect(input.value).toBe('a')
 // })
 
+// beforeAll(()=>{
+//   console.log("*****Before All*****")
+// })
+
 test("click event test case",()=>{
   render(<App/>)
   let btn = screen.getByRole("button")
   fireEvent.click(btn)
   expect(screen.getByText("Hello")).toBeInTheDocument()
+})
+
+test ("Snapshot for app component",()=>{
+  const container = render(<App/>)
+  expect(container).toMatchSnapshot();
 })
